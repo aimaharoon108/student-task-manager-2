@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main>
+        <!-- Form Section -->
+        <section class="form-section">
+            <h2>Student Task Manager</h2>
+
+            <form id="taskForm">
+
+                <label>Task Name</label>
+                <input type="text" id="taskName" required>
+
+                <label>Subject</label>
+                <select id="subject">
+                    <option>Math</option>
+                    <option>Science</option>
+                     <option>English</option>
+                    <option>Computer</option>
+                </select>
+
+                <label>Due Date</label>
+                <input type="date" id="dueDate" required>
+
+                <div class="btn-group">
+                    <button type="submit" class="btn add">Add Task</button>
+                    <button type="button" class="btn api" id="loadApi">Load API Data</button>
+                    <button type="button" class="btn clear" id="clearAll">Clear All</button>
+                </div>
+
+            </form>
+        </section>
+
+        <section>
+            <h3>Filter & Sort</h3>
+
+            <select id="filterSubject">
+                <option value="All">All Subjects</option>
+                <option value="Math">Math</option>
+                <option value="Science">Science</option>
+                <option value="English">English</option>
+                <option value="Computer">Computer</option>
+            </select>
+
+            <button id="sortDate" class="btn add">Sort by Date</button>
+        </section>
+
+        <!-- Task List -->
+        <section class="task-section">
+            <h2>Your Tasks</h2>
+            <ul id="taskList">
+                <li>No tasks yet</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
